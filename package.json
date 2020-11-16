@@ -3,7 +3,8 @@
 	"displayName": "Clean Dart Snippets",
 	"description": "Code Snippets For Clean Dart",
 	"version": "0.0.1",
-	"publisher": "jackcolley",
+    "publisher": "jackcolley",
+    "repository": "https://github.com/jackcolley/clean_dart_snippets.git",
 	"engines": {
 		"vscode": "^1.28.0"
 	},
