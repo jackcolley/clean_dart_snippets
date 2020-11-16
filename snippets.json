@@ -1,0 +1,75 @@
+{
+	"Usecase": {
+		"prefix": "usecase",
+		"body": [
+			"@injectable",
+			"class ${1:name} {",
+			"  final ${2:repository} repository;",
+			"",
+			"  ${1:name}(this.repository);",
+			"",
+			"  ${3:ReturnType} call() => repository.${4:RepositoryMethod};",
+			"}"
+		],
+		"description": "Creates a use case template for flutter clean architecture"
+	},
+	"Entity": {
+		"prefix": "entity",
+		"body": [
+			"part '$TM_FILENAME_BASE.freezed.dart';",
+			"part '$TM_FILENAME_BASE.g.dart';",
+			"",
+			"@freezed",
+			"abstract class ${1:name} with _$${1:name}{",
+			"const factory ${1:name}({",
+			"",
+			"",
+			"}) = _${1:name};",
+			"",
+			"factory ${1:name}.fromJson(Map<String, dynamic> json) => _$${1:name}FromJson(json);",
+			"}"
+
+		],
+		"description": "Creates an entity template for flutter clean architecture"
+	},
+	"TestFile": {
+		"prefix": "testfile",
+		"body": [
+			"void main() {",
+			"",
+			"group('${1:name}', () {",
+			"",
+			"// Dependencies",
+			"",
+			"setUp(() {",
+			"",
+			"",
+			"});",
+			"",
+			"",
+			"});",
+			"}"
+		],
+		"description": "Creates a test file template for flutter clean architecture"
+	},
+	"UnitTest": {
+		"prefix": "utest",
+		"body": [
+			"test('${1:name}', () async {",
+			"",
+			"// When",
+			"",
+			"// Expect",
+			"expect(",
+			"${2:action},",
+			"${3:expectedResult},",
+			");",
+			"",
+			"// Verify",
+			"",
+			"",
+			"});"
+		],
+		"description": "Creates a unit test template"
+	}
+}
